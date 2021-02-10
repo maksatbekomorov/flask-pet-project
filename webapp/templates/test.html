@@ -1,0 +1,30 @@
+<form method="POST" action={{ url_for('create_table') }}>
+
+<a href={{ url_for('add_row') }}><button type="submit" form="add">Додати колонку</button></a>
+
+<a href={{ url_for('del_row') }}><button type="submit" form="delete">Забрати колонку</button></a>
+
+
+    <div>
+        <br>
+        {{form1.table_name.label}}
+        {{form1.table_name}}
+        {{form1.table_rows.label}}
+        {{form1.table_rows}}
+    </div>
+
+
+    <!-- <div style="display: flex;"> -->
+    <div>
+
+        {% for i in form.table_column %}
+            {{i}}
+        {% endfor %}
+
+        {% for y in form.type_for_column %}
+            {{y}}
+        {% endfor %}
+
+    </div>
+    {{ form.submit }}
+</form>

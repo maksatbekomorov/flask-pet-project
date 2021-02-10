@@ -1,0 +1,13 @@
+shell
+
+$env:FLASK_APP="run"
+$env:FLASK_ENV="development"
+flask run
+
+
+
+vscode -> settings
+hide
+**/__pycache__
+
+

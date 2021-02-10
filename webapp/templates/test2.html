@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="{{url_for('static', filename='js/one.js')}}"></script>
+</head>
+<body>
+    <button onclick = "element.addRow()">Добавити колонку</button>
+    <button onclick = "element.delRow()">Видалити колонку</button>
+    
+
+    <form method="POST" action={{ url_for('create_table') }}>
+        
+        <div id="container">
+
+        </div>
+        <button type="submit" type="button">Відправити</button>
+    </form>
+
+</body>
+</html>
