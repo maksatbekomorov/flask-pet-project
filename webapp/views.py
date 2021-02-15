@@ -37,25 +37,25 @@ def do_login():
 @app.route('/create_table', methods=['POST'])
 def create_table():  # підготовка даних з форми для запису структури таблиці
     if request.method == "POST":
-        d = {}
-        f = {}
+        # d = {}
+        # f = {}
         x = request.form.to_dict()
-        for key, value in x.items():
-            if 'csrf' not in key and key != 'submit':
-                d[key] = value
-                print(key, '->', value)
-        for k, v in d.items():
-            if 'table_name' in k:
-                f.setdefault(k, v)
-            elif 'column_name' in k:
-                f.setdefault('table_columns', []).append(v)
-            elif 'column_type' in k:
-                f.setdefault('columns_type', []).append(v)
-            elif 'table_rows' in k:
-                f.setdefault(k, v)
+        # for key, value in x.items():
+        #     if 'csrf' not in key and key != 'submit':
+        #         d[key] = value
+        #         print(key, '->', value)
+        # for k, v in d.items():
+        #     if 'table_name' in k:
+        #         f.setdefault(k, v)
+        #     elif 'column_name' in k:
+        #         f.setdefault('table_columns', []).append(v)
+        #     elif 'column_type' in k:
+        #         f.setdefault('columns_type', []).append(v)
+        #     elif 'table_rows' in k:
+        #         f.setdefault(k, v)
         # create_pandas_table(f)
         # return f
-        print(f)
+        print(x)
         return jsonify(x)
 
 

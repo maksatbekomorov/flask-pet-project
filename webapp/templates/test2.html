@@ -12,12 +12,13 @@
     <button onclick = "element.delRow()">Видалити колонку</button>
     
 
-    <form method="POST" action={{ url_for('create_table') }}>
+    <!-- <form method="POST" action={{ url_for('create_table') }}> -->
         
         <div id="container">
 
         </div>
-        <button type="submit" type="button">Відправити</button>
+        <!-- <button type="submit" type="button">Відправити</button> -->
+        <button href={{ url_for('create_table') }} onclick = "element.send()" type="button">Відправити</button>
     </form>
 
 </body>

@@ -2,6 +2,7 @@ var i = 0;
 
 var element = {
     i:0,
+    t:0,
     addRow(){
 
         var array = ["Adress","Index","Phone","Zip"];
@@ -17,7 +18,7 @@ var element = {
         let text1 = document.createTextNode('Тип даних');
 
         var selectList = document.createElement("select");
-        selectList.setAttribute("id", "S"+`${this.i++}`);
+        selectList.setAttribute("id", "S"+`${this.t++}`);
         
 
         for (var i = 0; i < array.length; i++) {
@@ -37,8 +38,13 @@ var element = {
     delRow(){
         let a = document.getElementById("container");
         a.removeChild(a.childNodes[a.childNodes.length-1]);
+        this.i--;
+        this.t--;
 
     },
+    send: function(){
+        return('hello')
+    }
 };
 
 
