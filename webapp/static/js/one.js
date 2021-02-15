@@ -1,7 +1,7 @@
 var i = 0;
 
 var element = {
-    
+    i:0,
     addRow(){
 
         var array = ["Adress","Index","Phone","Zip"];
@@ -9,7 +9,7 @@ var element = {
         let a = document.getElementById("container");
         let newElem = document.createElement("input");
         newElem.setAttribute("type", "text");
-        newElem.setAttribute("id", "t"+(i++));
+        newElem.setAttribute("id", "z"+`${this.i++}`);
 
         var elem = document.createElement("p");
 
@@ -17,7 +17,7 @@ var element = {
         let text1 = document.createTextNode('Тип даних');
 
         var selectList = document.createElement("select");
-        selectList.setAttribute("id", "S"+(i++));
+        selectList.setAttribute("id", "S"+`${this.i++}`);
         
 
         for (var i = 0; i < array.length; i++) {
